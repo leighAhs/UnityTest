@@ -12,6 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0edaf9599d52ee54aab8bad5789e3691, type: 3}
   m_Name: PlayerSetting
   m_EditorClassIdentifier: 
-  score: 0
-  enemies: []
-  enemySpeed: []
+  score: 3
+  enemies:
+  - enemyPrefab: {fileID: 0}
+    speed: 0
+    HP: 0
+  - enemyPrefab: {fileID: 0}
+    speed: 0
+    HP: 0
+  - enemyPrefab: {fileID: 0}
+    speed: 0
+    HP: 0
