@@ -7,13 +7,11 @@ public class GameSetting : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI scoreText;
 
-    [SerializeField] int score;
-
     [SerializeField] string sceneName;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        scoreText.text = PlayerSetting.data.score.ToString();
+        scoreText.text = PlayerSetting.data.playerData.score.ToString();
     }
 
     // Update is called once per frame

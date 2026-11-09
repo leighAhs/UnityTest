@@ -1,18 +1,16 @@
-using NUnit.Framework;
+using Unity.VisualScripting;
 using UnityEngine;
-using System.Collections.Generic;
 
-[CreateAssetMenu(fileName = "PlayerSetting", menuName = "ScriptableObject/PlayerSetting")]
+[CreateAssetMenu(fileName = "PlayerSetting", menuName = "Scriptable Objects/PlayerSetting")]
 public class PlayerSetting : ScriptableObject
 {
-
     static PlayerSetting PlayerData;
 
     public static PlayerSetting data
     {
         get
         {
-            if (PlayerData == null)
+            if(PlayerData == null)
             {
                 PlayerData = Resources.Load<PlayerSetting>("PlayerSetting");
             }
@@ -20,17 +18,11 @@ public class PlayerSetting : ScriptableObject
         }
     }
 
-    public int score;
-
-    public EnemyStats[] enemies;
-    //public float[] enemySpeed;
-    //public List<string> enemiesList;
+    public PlayerData playerData;
 }
-
 [System.Serializable]
-public class EnemyStats
+public class PlayerData
 {
-    public GameObject enemyPrefab;
-    public float speed;
-    public int HP;
+    public int score;
 }
+
